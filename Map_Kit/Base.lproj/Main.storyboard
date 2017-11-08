@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Map_Kit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uob-FK-gwG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="609"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQq-wf-esc">
+                                <rect key="frame" x="0.0" y="629" width="124" height="30"/>
+                                <state key="normal" title="Map Type"/>
+                                <connections>
+                                    <action selector="MapTypeBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xO-Ic-Szg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gok-RH-eqN">
+                                <rect key="frame" x="124" y="629" width="124" height="30"/>
+                                <state key="normal" title="Zoom"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urt-c7-2rG">
+                                <rect key="frame" x="248" y="629" width="124" height="30"/>
+                                <state key="normal" title="Find Route"/>
+                                <connections>
+                                    <action selector="FindRouteBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBV-Qi-qdN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Urt-c7-2rG" firstAttribute="top" secondItem="Gok-RH-eqN" secondAttribute="top" id="DEi-up-hTB"/>
+                            <constraint firstItem="uob-FK-gwG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HeP-HT-B41"/>
+                            <constraint firstItem="Gok-RH-eqN" firstAttribute="width" secondItem="qQq-wf-esc" secondAttribute="width" id="LpM-W2-rVT"/>
+                            <constraint firstItem="qQq-wf-esc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RSg-ce-MT6"/>
+                            <constraint firstItem="Urt-c7-2rG" firstAttribute="width" secondItem="Gok-RH-eqN" secondAttribute="width" id="SWQ-op-xga"/>
+                            <constraint firstAttribute="trailing" secondItem="uob-FK-gwG" secondAttribute="trailing" id="au1-mm-Fu5"/>
+                            <constraint firstItem="Gok-RH-eqN" firstAttribute="leading" secondItem="qQq-wf-esc" secondAttribute="trailing" id="c7m-bf-jy6"/>
+                            <constraint firstItem="uob-FK-gwG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iOQ-G1-WSW"/>
+                            <constraint firstItem="qQq-wf-esc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.33" id="khq-ax-eHA"/>
+                            <constraint firstItem="Urt-c7-2rG" firstAttribute="leading" secondItem="Gok-RH-eqN" secondAttribute="trailing" id="oxn-OA-Fan"/>
+                            <constraint firstItem="Gok-RH-eqN" firstAttribute="top" secondItem="qQq-wf-esc" secondAttribute="top" id="pk2-Cc-wW4"/>
+                            <constraint firstItem="Urt-c7-2rG" firstAttribute="top" secondItem="uob-FK-gwG" secondAttribute="bottom" id="q2f-2o-E0o"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qQq-wf-esc" secondAttribute="bottom" constant="8" id="qyK-Jc-Bvx"/>
+                            <constraint firstItem="Urt-c7-2rG" firstAttribute="bottom" secondItem="Gok-RH-eqN" secondAttribute="bottom" id="s2j-EM-j40"/>
+                            <constraint firstItem="Gok-RH-eqN" firstAttribute="bottom" secondItem="qQq-wf-esc" secondAttribute="bottom" id="ywM-I1-Tih"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Mapkit" destination="uob-FK-gwG" id="NYt-4r-18o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
